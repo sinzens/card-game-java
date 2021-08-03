@@ -19,13 +19,11 @@ public class Player {
     // Written by Zhang Mengpei, Liu Xuan, Ou Linyu
     public Card playCard() {
         Random random = new Random();
-        int n = random.nextInt(this.getCardNumber());
-        Card currentCard = this.cards.get(n);
-        Decor a = currentCard.getDecor();
-        int b = currentCard.getNumber();
-        this.cards.remove(n);
+        int target = random.nextInt(this.getCardNumber());
+        Card currentCard = this.cards.get(target);
+        this.cards.remove(target);
 
-        return new Card(a,b);
+        return new Card(currentCard.getDecor(), currentCard.getNumber());
     }
 
     // Written by Zeng Yinuo

@@ -53,9 +53,6 @@ public class Card {
     // Written by Zeng Yinuo
     @Override
     public String toString() {
-        return "Card{" +
-                "decor=" + decor +
-                ", number=" + number +
-                '}';
+        return String.format("Card { decor = %s, number = %d }", this.decor, this.number);
     }
 }
